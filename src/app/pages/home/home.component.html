@@ -1,0 +1,77 @@
+<ngb-carousel *ngIf="images" >
+  <ng-template ngbSlide>
+    <div class="d picsum-img-wrapper">
+      <img class="silder" [src]="images[0]" alt="Random first slide">
+    </div>
+    <div class="carousel-caption">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="d picsum-img-wrapper">
+      <img class="silder"  [src]="images[1]" alt="Random second slide">
+    </div>
+    <div class="carousel-caption">
+      <h3 class="dark">kids</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="d picsum-img-wrapper">
+      <img class="silder"  [src]="images[2]" alt="Random third slide">
+    </div>
+    <div class="carousel-caption">
+      <h3 class="dark">equipment</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<div class="container">
+  <div class="cat">
+    <img src="assets/photos/4.jpg"style="width: 100%;" >
+    <button class="button">  Kids </button>
+  </div>
+  <div class="cat">
+    <img src="assets/photos/5.jpg " style="width: 100%;">
+    <button class="button">  Men </button>
+  </div>
+    <div class="cat">
+    <img class="img" src="assets/photos/6.jpg" style="width: 100%;">
+    <button class="button w">  women </button>
+  </div>
+</div>
+
+<section>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Ahmed Store</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Top Products <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Bestseller</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+<div class="container " >
+
+   <div class="cat producat" *ngFor="let item of producat">
+     <div class="img_holder">
+     <img src={{item.img}}  style="width: 100%;" >
+    <button class="button_cart"><img src="assets/photos/7.jpg" width="100%" height="100%"></button>
+    </div>
+     <h4>{{item.name}} </h4> <p style="color: red;">{{item.price}}$</p>
+   </div>
+</div>
+</section>
+
+
